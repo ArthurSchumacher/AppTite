@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --primary-color: #ED7D6A;
+    --secondary-color: #F1B16B;
+    --text-color: #fff;
+    --background-color: #f5f5f5;
+    --border-color-white: #fff;
+    --border-color-black: #000;
+    --hover-color: #d0d0d0;
+    --background-image-1: url('/assets/img/foto-beneficios.jpg');
+    --background-image-2: url('/assets/img/exemplo-1.jpg');
+    --background-image-3: url('/assets/img/exemplo-2.jpg');
+    --background-image-4: url('/assets/img/exemplo-3.jpg');
+    --background-image-banner: url('/assets/img/banner_1.png');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+.navbar-logo {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 24px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.normalize-text {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.btn-success {
+    border: none;
+}
+
+.custom-background {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.custom-background-image {
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-border {
+    border: 2px solid var(--border-color-white);
+    padding: 10px;
+}
+
+.black-border {
+    border: 2px solid var(--border-color-black);
+    padding: 10px;
+}
+
+.image-1 {
+    background-image: var(--background-image-1);
+}
+
+.image-2 {
+    background-image: var(--background-image-2);
+}
+
+.image-3 {
+    background-image: var(--background-image-3);
+}
+
+.image-4 {
+    background-image: var(--background-image-4);
+}
+
+.gap-right {
+    padding-right: 2rem;
+}
+
+.gap-left {
+    padding-left: 2rem;
+}
+
+.vertical-align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.text-container {
+    background: linear-gradient(to bottom, var(--background-color), #fff);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    color: #18191a;
+    width: 55%;
+}
+
+.custom-background::before {
+    content: "";
+    background-image: var(--background-image-banner);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: blur(3px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.accordion-button[aria-expanded="true"] {
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+    color: #fff;
+}
+
+.section-grey {
+    background-color: var(--background-color);
+    padding: 40px 0;
+}
+
+.section-linear-gradient-left {
+    background: linear-gradient(to bottom left, var(--primary-color), var(--secondary-color));
+    padding: 40px 0;
+    color: #fff;
+}
+
+.section-como-funciona {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 28px;
+    padding-bottom: 30px;
+}
+
+.feature-box {
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease-in-out;
+    min-height: 200px;
+    color: #fff;
+}
+
+.feature-box:hover {
+    background-color: var(--hover-color);
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.feature-box h3 {
+    font-size: 18px;
+}
+
+.feature-box p {
+    font-size: 14px;
+}
+
+.custom-text-right {
+    text-align: right;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.whatsapp-button a {
+    text-decoration: none;
+}
+
+.whatsapp-button i {
+    font-size: 30px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-image {
+    width: auto;
+    height: 150px;
+}
+
+@media screen and (max-width: 800px) and (max-height: 600px) {
+    .feature-box {
+        min-height: 215px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .vertical-align {
+        min-height: 150px;
+    }
+
+    .vertical-align ul {
+        padding-top: 4rem;
+    }
+
+    .custom-background-image {
+        margin-left: 2.5rem;
+        width: 80%;
+    }
+
+    .reorganizar-para-celular .custom-background-image {
+        order: -1;
+    }
+
+    .reorganizar-para-celular .gap-left {
+        margin-left: 0;
+    }
+
+    .reorganizar-para-celular .gap-right {
+        margin-right: 0;
+    }
+
+    .reorganizar-para-celular .vertical-align {
+        text-align: center;
+    }
+
+    .reorganizar-para-celular .black-border {
+        border: 1px solid #000;
+    }
+
+    .reorganizar-para-celular .imagem-com-width-80 {
+        width: 80%;
+    }
+}
